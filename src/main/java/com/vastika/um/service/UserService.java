@@ -15,4 +15,6 @@ public interface UserService {
 	User getUserById(int id);
 	
     void updateUser(User user);
+    
+    User getUserByUsernameAndPassword(String username, String password);
 }

@@ -5,66 +5,88 @@
 <head>
 <meta charset="UTF-8">
 <title>User Registration Form</title>
-<%@ include file = "header.jsp" %>
+<%@ include file="header.jsp"%>
 </head>
 <body>
-	<div>
-		<form action="save_user" method="post">
-	</div>
-	<div>
-		<label>User Name</label>
-		<input type="text" name="username">
-	</div>
-	
-	<div>
-		<label>Password</label>
-		<input type="password" name="password">
-	</div>
-	<div>
-		<label>dob</label>
-		<input type="date" name="dob">
-	</div>
-	<div>
-		<label>Email</label>
-		<input type="email" name="email">
-	</div>
-	<div>
-		<label>Mobile No</label>
-		<input type="number" name="mobileNo">
-	</div>
-	<div>
-		<label>Address</label>
-		<input type="text" name="address">
-	</div>
-	<div>
-		<label>Gender</label>
-		<input type="radio" name="gender" value ="Male">Male
-		<input type="radio" name="gender" value ="Female">Female
-		
-	</div>
-	<div>
-		<label>Hobbies</label>
-		<input type="checkbox" name="hobbies" value = "swimming">swimming
-		<input type="checkbox" name="hobbies" value = "chess">chess
-	</div>
-	<div>
-	<label>Nationality</label>
-		<select name =  "nationality">
-		
-		<option value  =  "Nepalese"> Nepalese </option>
-		<option value  =  "Indian"> Indian </option>
-		<option value  =  "American"> American </option>
-		
-		</select>
-	</div>
-	<div>
-	
-	<label>Comments</label>
-	<textarea rows="6" cols="30"  name =  "comments"></textarea>
-	</div>
-	
-	<div>
-	<input type ="submit" value =  "Submit">
+	<div class="cointainer">
+		<div class="panel">
+			<div class="panel-default">
+				<div class="rows ">
+					<div class="col-md-2"></div>
+					<div class="col-md-8  jumbotron">
+						<form action="save_user" method="post" class="form-horizontal">
+							<fieldset>
+								<legend>User form Registration</legend>
+								<div class="form-group">
+
+									<label>User Name</label> <input type="text" name="username"
+										class="form-control">
+								</div>
+
+								<div class="form-group">
+									<label>Password</label> <input type="password" name="password"
+										class="form-control">
+								</div>
+								<div class="form-group">
+									<label>DOB</label> <input type="date" name="dob"
+										class="form-control">
+								</div>
+								<div class="form-group">
+									<label>Email</label> <input type="email" name="email"
+										class="form-control">
+								</div>
+								<div class="form-group">
+									<label>Mobile No</label> <input type="number" name="mobileNo"
+										class="form-control">
+								</div>
+								<div class="form-group">
+									<label>Address</label> <input type="text" name="address"
+										class="form-control">
+								</div>
+								<div>
+									<label>Gender</label> <input type="radio" name="gender"
+										value="Male">Male <input type="radio" name="gender"
+										value="Female">Female
+
+								</div>
+								<div class="form-group">
+									<label>Hobbies</label> <input type="checkbox" name="hobbies"
+										value="swimming">swimming <input type="checkbox"
+										name="hobbies" value="chess">chess
+								</div>
+								<div class="form-group">
+									<label>Nationality</label> <select name="nationality"
+										class="form-control">
+
+										<option value="Nepalese">Nepalese</option>
+										<option value="Indian">Indian</option>
+										<option value="American">American</option>
+
+									</select>
+								</div>
+								<div class="form-group">
+
+									<label>Comments</label>
+									<textarea rows="6" cols="30" name="comments"
+										class="form-control"></textarea>
+								</div>
+
+								<div class="form-group">
+									<input type="submit" value="Submit" class=" btn btn-danger">
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<div class="col-md-2"></div>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
+<body>
+	<div>
+		<p>hi my name is sameer pakuwal.</p>
+	</div>
+</body>
+
 </html>

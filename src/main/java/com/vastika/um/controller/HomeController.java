@@ -8,7 +8,7 @@ public class HomeController {
 
 	
 	
-	@RequestMapping(value = { "/", "/home"})
+	@RequestMapping(value = {"/home"})
 	public String getHomepage() {
 		return "home";
 		

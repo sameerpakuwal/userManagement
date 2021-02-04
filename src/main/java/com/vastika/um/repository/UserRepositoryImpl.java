@@ -19,7 +19,8 @@ public class UserRepositoryImpl implements UserRepository {
 	private static final String DELETE_SQL = "delete from user_table where id =?";
 	private static final String GET_USER_BY_ID_SQL = "select * from user_table where id  = ?";  
 	private static final String UPDATE_SQL = "update user_table set username=?, password=?, email=?, gender=?, hobbies=?, nationality=?,dob=?, mobileNo=?, comments=?,  address=? where id=?";
-
+	private static final String LOGIN_SQL = "select * from user_table where username  = ? and password = ?";
+	
 	@Autowired
 	private DataSource dataSource;
 	
@@ -65,4 +66,13 @@ public class UserRepositoryImpl implements UserRepository {
 				user.getMobileNo(),user.getAddress(),user.getComments(), user.getId()});
 		
 	}
+
+	@Override
+	public User getUserByUsernameAndPassword(String username, String password) {
+		List<User> userList=getJdbcTemplate(dataSource).query(LOGIN_SQL,new Object[] {username,password}, new UserRowMapper());
+		if(!userList.isEmpty()) {
+			return userList.get(0);
+		}
+		return null;
+}
 }

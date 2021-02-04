@@ -42,4 +42,10 @@ public class UserServiceImpl implements UserService {
 		
 	}
 
+	@Override
+	public User getUserByUsernameAndPassword(String username, String password) {
+		
+		return userRepository.getUserByUsernameAndPassword(username, password);
+	}
+
 }

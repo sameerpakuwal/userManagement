@@ -27,8 +27,8 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "/save_user", method = RequestMethod.POST)
-	public String saveUser(@ModelAttribute User user) {
-	userService.saveUser(user);		
+	public String saveUser(@ModelAttribute("useri") User use) {
+	userService.saveUser(use);		
 		return "redirect:/list_user";
 	}
 	

@@ -31,4 +31,5 @@
 	
 	<bean id = "userRepository" class ="com.vastika.um.repository.UserRepositoryImpl"/>
 	<bean id = "userService" class = "com.vastika.um.service.UserServiceImpl"/>
+	<mvc:resources location="/resources/" mapping="/resources/**"/>
 </beans>
